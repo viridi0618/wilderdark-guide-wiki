@@ -1,0 +1,10 @@
+import { readFileSync } from "node:fs";
+const layout = readFileSync(new URL("../src/app/layout.tsx", import.meta.url), "utf8");
+const page = readFileSync(new URL("../src/app/[slug]/page.tsx", import.meta.url), "utf8");
+const guidePage = readFileSync(new URL("../src/components/GuidePage.tsx", import.meta.url), "utf8");
+const sitemap = readFileSync(new URL("../src/app/sitemap.ts", import.meta.url), "utf8");
+const all = `${layout}\n${page}\n${guidePage}\n${sitemap}`;
+for (const token of ["alternates", "canonical", "openGraph", "twitter", "FAQPage", "Article", "BreadcrumbList"]) if (!all.includes(token)) throw new Error(`Missing SEO feature: ${token}`);
+if ((guidePage.match(/FAQPage/g) || []).length !== 1) throw new Error("FAQ schema must be emitted exactly once in GuidePage.");
+for (const route of ["release-date", "demo", "gameplay", "dinosaurs", "system-requirements", "platforms"]) if (!sitemap.includes(`/${route}`)) throw new Error(`Missing sitemap route: ${route}`);
+console.log("SEO check passed: metadata, canonicals, schemas, and all sitemap routes found.");

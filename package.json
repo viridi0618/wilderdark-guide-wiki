@@ -1,0 +1,28 @@
+{
+  "name": "wilderdark-guide-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "check:seo": "node scripts/check-seo.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:data": "node scripts/check-data.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.5.7",
+    "typescript": "5.8.2"
+  },
+  "packageManager": "pnpm@11.9.0"
+}
