@@ -24,7 +24,13 @@ export type Guide = {
 const steamGame = "https://store.steampowered.com/app/2735850/Wilderdark/";
 const steamDemo = "https://store.steampowered.com/app/2735900/Wilderdark_Demo/";
 const gematsu = "https://www.gematsu.com/2026/07/wilderdark-launches-november-3";
+const teamJunkfish = "https://www.teamjunkfish.com/games/wilderdark";
 const steamImage = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2735850/header.jpg";
+const steamDemoImage = "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2735900/header.jpg";
+const caveScreenshot = "https://static.wixstatic.com/media/2c38bb_110f18357def4c7eb65e8540707f164c~mv2.png/v1/fill/w_1200,h_676,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/wilderdark-Screenshots-10.png";
+const trexScreenshot = "https://static.wixstatic.com/media/2c38bb_6883f422d06f4c06ab548bb42a2eaeb9~mv2.png/v1/fill/w_1200,h_676,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2c38bb_6883f422d06f4c06ab548bb42a2eaeb9~mv2.png";
+const glowingPlantScreenshot = "https://static.wixstatic.com/media/2c38bb_7aff089e4d1e473686cd83962f60dabe~mv2.png/v1/fill/w_1200,h_676,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2c38bb_7aff089e4d1e473686cd83962f60dabe~mv2.png";
+const teamJunkfishKeyArt = "https://static.wixstatic.com/media/2c38bb_ec293bf6029546f2a4bfc576930b7f09~mv2.png/v1/fill/w_1500,h_844,al_c/2c38bb_ec293bf6029546f2a4bfc576930b7f09~mv2.png";
 
 export const guides: Guide[] = [
   {
@@ -71,10 +77,10 @@ export const guides: Guide[] = [
     h1: "Wilderdark Demo Guide",
     description: "A free Wilderdark demo is available on Steam. Learn how to play it, what the demo appears to cover, and whether progress carry-over has been confirmed.",
     intro: "The free Wilderdark demo is available on PC via Steam. Its store description establishes the premise and core framing, but does not specify length, download size, or progress carry-over.",
-    image: steamImage,
-    imageAlt: "Wilderdark official Steam store artwork",
-    heroImage: steamImage,
-    imageSource: "Official Steam store listing",
+    image: steamDemoImage,
+    imageAlt: "Wilderdark Demo official Steam store artwork",
+    heroImage: steamDemoImage,
+    imageSource: "Official Wilderdark Demo Steam store listing",
     facts: [
       { label: "Demo", value: "Free on Steam", status: "confirmed" },
       { label: "Demo release date", value: "May 7, 2026", status: "confirmed" },
@@ -105,10 +111,10 @@ export const guides: Guide[] = [
     h1: "Wilderdark Gameplay Guide",
     description: "Wilderdark is a first-person survival horror game about exploration, survival, ectoparasitic dinosaurs, and island investigation. Here is what we know so far.",
     intro: "Wilderdark combines first-person survival horror with stealth, environmental investigation, photography, sample collection, and crafted tools. The complete mechanics list is not yet available.",
-    image: steamImage,
-    imageAlt: "Wilderdark official Steam store artwork",
-    heroImage: steamImage,
-    imageSource: "Official Steam store listing",
+    image: caveScreenshot,
+    imageAlt: "Dark cave in Wilderdark from an official Team Junkfish screenshot",
+    heroImage: caveScreenshot,
+    imageSource: "Official Team Junkfish Wilderdark gallery",
     facts: [
       { label: "Genre", value: "First-person survival horror", status: "confirmed" },
       { label: "Perspective", value: "First-person", status: "confirmed" },
@@ -131,7 +137,10 @@ export const guides: Guide[] = [
       { question: "Does Wilderdark have crafting?", answer: "Crafted tools are confirmed, but the full crafting system and recipes have not been announced." }
     ],
     internalLinks: ["dinosaurs", "demo", "system-requirements"],
-    sources: [{ name: "Steam — Wilderdark", url: steamGame, note: "Primary gameplay premise and mechanic descriptions." }]
+    sources: [
+      { name: "Steam — Wilderdark", url: steamGame, note: "Primary gameplay premise and mechanic descriptions." },
+      { name: "Team Junkfish — Wilderdark", url: teamJunkfish, note: "Developer overview, gameplay features, and official gallery." }
+    ]
   },
   {
     slug: "dinosaurs",
@@ -140,10 +149,10 @@ export const guides: Guide[] = [
     h1: "Wilderdark Dinosaurs & Ectoparasites",
     description: "A mysterious ectoparasite affects dinosaurs and organisms in Wilderdark. Here is what is confirmed, what is unknown, and what not to assume yet.",
     intro: "Dinosaurs corrupted by a mysterious ectoparasitic organism are central to Wilderdark's premise. Steam explicitly mentions a T-rex, but no full species list or bestiary exists yet.",
-    image: steamImage,
-    imageAlt: "Wilderdark official Steam store artwork",
-    heroImage: steamImage,
-    imageSource: "Official Steam store listing",
+    image: trexScreenshot,
+    imageAlt: "T-rex lurking in a Wilderdark environment in an official Team Junkfish screenshot",
+    heroImage: trexScreenshot,
+    imageSource: "Official Team Junkfish Wilderdark gallery",
     facts: [
       { label: "Dinosaurs", value: "Major confirmed concept", status: "confirmed" },
       { label: "Ectoparasites", value: "Confirmed concept", status: "confirmed" },
@@ -165,7 +174,10 @@ export const guides: Guide[] = [
       { question: "Is the full monster list known?", answer: "No. A complete creature or monster list has not been announced." }
     ],
     internalLinks: ["gameplay", "system-requirements"],
-    sources: [{ name: "Steam — Wilderdark", url: steamGame, note: "Primary dinosaur, ectoparasite, and T-rex references." }]
+    sources: [
+      { name: "Steam — Wilderdark", url: steamGame, note: "Primary dinosaur, ectoparasite, and T-rex references." },
+      { name: "Team Junkfish — Wilderdark", url: teamJunkfish, note: "Developer creature framing and official gallery." }
+    ]
   },
   {
     slug: "system-requirements",
@@ -174,10 +186,10 @@ export const guides: Guide[] = [
     h1: "Wilderdark System Requirements",
     description: "Official PC system requirements for Wilderdark, including Windows 10 64-bit, 16 GB RAM minimum, RTX 2070 minimum, and recommended RTX 3060-class hardware.",
     intro: "Steam lists DirectX 12 PC requirements with 16 GB RAM and an RTX 2070-class minimum GPU. Storage space and Steam Deck compatibility are not currently specified.",
-    image: steamImage,
-    imageAlt: "Wilderdark official Steam store artwork",
-    heroImage: steamImage,
-    imageSource: "Official Steam store listing",
+    image: glowingPlantScreenshot,
+    imageAlt: "Wilderdark landscape with a glowing plant in an official Team Junkfish screenshot",
+    heroImage: glowingPlantScreenshot,
+    imageSource: "Official Team Junkfish Wilderdark gallery",
     facts: [
       { label: "Minimum memory", value: "16 GB RAM", status: "confirmed" },
       { label: "Recommended memory", value: "32 GB RAM", status: "confirmed" },
@@ -208,10 +220,10 @@ export const guides: Guide[] = [
     h1: "Wilderdark Platforms",
     description: "Wilderdark is confirmed for PC via Steam. PS5, Xbox Series X|S, and Nintendo Switch versions have not been announced.",
     intro: "PC via Steam is the only confirmed Wilderdark platform in the current source set. No PS5, Xbox Series X|S, Nintendo Switch, or Steam Deck status has been announced.",
-    image: steamImage,
-    imageAlt: "Wilderdark official Steam store artwork",
-    heroImage: steamImage,
-    imageSource: "Official Steam store listing",
+    image: teamJunkfishKeyArt,
+    imageAlt: "Wilderdark official Team Junkfish key art",
+    heroImage: teamJunkfishKeyArt,
+    imageSource: "Official Team Junkfish Wilderdark page",
     facts: [
       { label: "PC via Steam", value: "Confirmed", status: "confirmed" },
       { label: "PS5", value: "Not announced", status: "unknown" },
@@ -237,7 +249,8 @@ export const guides: Guide[] = [
     internalLinks: ["release-date", "system-requirements", "demo"],
     sources: [
       { name: "Steam — Wilderdark", url: steamGame, note: "Primary PC platform and release listing." },
-      { name: "Steam — Wilderdark Demo", url: steamDemo, note: "Confirmed PC demo availability." }
+      { name: "Steam — Wilderdark Demo", url: steamDemo, note: "Confirmed PC demo availability." },
+      { name: "Team Junkfish — Wilderdark", url: teamJunkfish, note: "Developer key facts list Steam as the current platform." }
     ]
   }
 ];
