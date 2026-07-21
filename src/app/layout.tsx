@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: SITE_NAME, title: "Wilderdark Wiki Guide: Release Date, Demo & Dinosaurs", description: DEFAULT_DESCRIPTION, url: "/", images: [{ url: DEFAULT_SOCIAL_IMAGE, width: 460, height: 215, alt: "Wilderdark official store artwork" }] },
-  twitter: { card: "summary_large_image", title: "Wilderdark Wiki Guide: Release Date, Demo & Dinosaurs", description: DEFAULT_DESCRIPTION, images: [DEFAULT_SOCIAL_IMAGE] },
+  openGraph: { type: "website", siteName: SITE_NAME, images: [{ url: DEFAULT_SOCIAL_IMAGE, width: 460, height: 215, alt: "Wilderdark official store artwork" }] },
+  twitter: { card: "summary_large_image", images: [DEFAULT_SOCIAL_IMAGE] },
   verification: { google: "google70d2f5ada7903a5f" }
 };
 
